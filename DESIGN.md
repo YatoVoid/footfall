@@ -1,4 +1,4 @@
-# WhaleTale console — visual world
+# Footfall console — visual world
 
 **Mode:** Operate. The operator completes tasks; the interface recedes. Brand
 lives in precise details, not expression.

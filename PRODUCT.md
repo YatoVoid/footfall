@@ -1,4 +1,4 @@
-# WhaleTale — product context
+# Footfall — product context
 
 Turns a multi-tenant property's existing security cameras into per-space
 foot-traffic data, so the operator can price a space, fill it, and prove its

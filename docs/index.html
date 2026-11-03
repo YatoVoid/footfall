@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>WhaleTale Handbook</title>
+<title>Footfall Handbook</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How to run and operate WhaleTale end to end: every CLI and env var, each console screen, the fleet admin API, the statistics, and exact edge-case behaviour.">
+<meta name="description" content="How to run and operate Footfall end to end: every CLI and env var, each console screen, the fleet admin API, the statistics, and exact edge-case behaviour.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23f6f5f1'/%3E%3Cpath d='M3 12h10L8 3z' fill='none' stroke='%232f4f4f' stroke-width='1.2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -230,7 +230,7 @@ table.mini thead th { font-size: 9px; }
 
 <div class="wrap">
 <aside class="rail">
-  <div class="brand">WhaleTale<span>operations handbook</span></div>
+  <div class="brand">Footfall<span>operations handbook</span></div>
   <nav>
     <a href="#what"><span class="n">1</span> What it is</a>
     <a href="#architecture"><span class="n">2</span> Architecture</a>
@@ -251,9 +251,9 @@ table.mini thead th { font-size: 9px; }
 
 <section id="what">
   <p class="eyebrow">Reference</p>
-  <h1>WhaleTale operations handbook</h1>
+  <h1>Footfall operations handbook</h1>
   <hr class="rule">
-  <p class="lead">WhaleTale turns a property's existing security cameras into per-space
+  <p class="lead">Footfall turns a property's existing security cameras into per-space
   foot-traffic data, so the operator of a multi-tenant space (a market, a food hall, an
   antique mall, mixed-use retail) can price it, fill it, and prove its value to
   tenants.</p>
@@ -303,7 +303,7 @@ table.mini thead th { font-size: 9px; }
       <tr><td><code>edge/</code></td><td>Python 3.12, PyAV, RT-DETR, Norfair, Shapely, SQLite (WAL)</td><td>Runs unattended on the property. You touch it at install and after a camera move.</td></tr>
       <tr><td><code>cloud/</code></td><td>Python 3.12, FastAPI, SQLAlchemy 2, Alembic, Postgres 16, WeasyPrint</td><td>One instance per deployment. Holds the history, renders reports, evaluates fleet health.</td></tr>
       <tr><td><code>web/</code></td><td>Next.js 15 (App Router), TypeScript, Tailwind v4, Auth.js</td><td>The property manager, the person who prices space and signs tenants. Light theme only, by design: a daytime back-office tool.</td></tr>
-      <tr><td><code>/admin/*</code></td><td>JSON API on the same FastAPI app</td><td>WhaleTale staff, or you helping remotely. Fleet health and alerts. No UI.</td></tr>
+      <tr><td><code>/admin/*</code></td><td>JSON API on the same FastAPI app</td><td>Footfall staff, or you helping remotely. Fleet health and alerts. No UI.</td></tr>
     </tbody>
   </table></div>
 </section>
@@ -425,7 +425,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
     <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">localhost:3000/sign-in</span></div>
     <div class="shot-body" style="min-height:auto">
       <div class="shot-main">
-        <div class="shot-h">WhaleTale</div>
+        <div class="shot-h">Footfall</div>
         <div class="shot-sub">Operator sign-in</div>
         <div class="frow"><span class="k">Email</span><span>manager@cedarstreet.market</span></div>
         <div class="frow"><span class="k">API token</span><span style="font-family:var(--mono)">&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;</span></div>
@@ -440,7 +440,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
     <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">localhost:3000/</span></div>
     <div class="shot-body">
       <div class="mini-rail">
-        <div class="mb">WhaleTale</div><div class="ms">Cedar Street Market</div>
+        <div class="mb">Footfall</div><div class="ms">Cedar Street Market</div>
         <a class="on">Overview</a><a>Schedule</a><a>Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a>
       </div>
       <div class="shot-main">
@@ -471,7 +471,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
   <div class="shot">
     <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">localhost:3000/schedule</span></div>
     <div class="shot-body">
-      <div class="mini-rail"><div class="mb">WhaleTale</div><div class="ms">Cedar Street Market</div><a>Overview</a><a class="on">Schedule</a><a>Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
+      <div class="mini-rail"><div class="mb">Footfall</div><div class="ms">Cedar Street Market</div><a>Overview</a><a class="on">Schedule</a><a>Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
       <div class="shot-main">
         <div class="shot-h">Schedule</div>
         <div class="shot-sub">Jun 2 &ndash; Jun 15. Click a cell, shift-click a block, then assign an occupant.</div>
@@ -493,7 +493,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
   <div class="shot">
     <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">localhost:3000/spaces/rosas-tamales</span></div>
     <div class="shot-body">
-      <div class="mini-rail"><div class="mb">WhaleTale</div><div class="ms">Cedar Street Market</div><a>Overview</a><a>Schedule</a><a class="on">Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
+      <div class="mini-rail"><div class="mb">Footfall</div><div class="ms">Cedar Street Market</div><a>Overview</a><a>Schedule</a><a class="on">Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
       <div class="shot-main">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
           <div><div class="shot-h">Stall 1</div><div class="shot-sub">stall &middot; Rosa's Tamales</div></div>
@@ -517,7 +517,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
   <div class="shot">
     <div class="shot-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">localhost:3000/spaces/rosas-tamales/zone</span></div>
     <div class="shot-body">
-      <div class="mini-rail"><div class="mb">WhaleTale</div><div class="ms">Cedar Street Market</div><a>Overview</a><a>Schedule</a><a class="on">Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
+      <div class="mini-rail"><div class="mb">Footfall</div><div class="ms">Cedar Street Market</div><a>Overview</a><a>Schedule</a><a class="on">Spaces</a><a>Occupants</a><a>Reports</a><a>Settings</a></div>
       <div class="shot-main">
         <div class="shot-h">Zone &middot; Stall 1</div>
         <div class="shot-sub">Click to add a point, drag to move, double-click to delete. Points snap. Coordinates are normalized.</div>
@@ -600,7 +600,7 @@ DATABASE_URL=postgresql+psycopg://&hellip; <b>uv run whaletale-api --port</b> 80
 <section id="admin" class="wide">
   <h2><span class="n">5</span> Fleet admin</h2>
   <hr class="rule">
-  <p>WhaleTale staff, or you helping from a distance. A JSON API, no UI, authed with the
+  <p>Footfall staff, or you helping from a distance. A JSON API, no UI, authed with the
   single <code>WHALETALE_ADMIN_TOKEN</code>. <code>GET /admin/fleet</code> is the live
   health view; <code>POST /admin/fleet/evaluate</code> persists the current alert set
   into the <code>alerts</code> table (run it on a schedule);
